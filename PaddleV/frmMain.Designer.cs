@@ -31,21 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.ChatBox = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.clearAllTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.clearAllTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnSend = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEmotes = new System.Windows.Forms.Button();
             this.btnPictures = new System.Windows.Forms.Button();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ChatBubbles = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ChatBox
@@ -53,7 +55,8 @@
             this.ChatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ChatBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ChatBox.ContextMenuStrip = this.contextMenuStrip1;
-            this.ChatBox.Location = new System.Drawing.Point(325, 678);
+            this.ChatBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChatBox.Location = new System.Drawing.Point(217, 678);
             this.ChatBox.MaxLength = 500;
             this.ChatBox.Multiline = true;
             this.ChatBox.Name = "ChatBox";
@@ -72,17 +75,35 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(126, 98);
             // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.copyToolStripMenuItem.Text = "Copy";
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.pasteToolStripMenuItem.Text = "Paste";
+            // 
+            // cutToolStripMenuItem
+            // 
+            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.cutToolStripMenuItem.Text = "Cut";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(122, 6);
+            // 
             // clearAllTextToolStripMenuItem
             // 
             this.clearAllTextToolStripMenuItem.Name = "clearAllTextToolStripMenuItem";
             this.clearAllTextToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.clearAllTextToolStripMenuItem.Text = "Clear Text";
             this.clearAllTextToolStripMenuItem.Click += new System.EventHandler(this.clearAllTextToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(122, 6);
             // 
             // contextMenuStrip2
             // 
@@ -91,9 +112,10 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(1059, 677);
+            this.btnSend.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.Location = new System.Drawing.Point(1073, 678);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(137, 57);
+            this.btnSend.Size = new System.Drawing.Size(123, 54);
             this.btnSend.TabIndex = 3;
             this.btnSend.Text = "Send";
             this.toolTip1.SetToolTip(this.btnSend, "Send (ENTER)");
@@ -104,7 +126,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel1.Controls.Add(this.btnEmotes);
             this.panel1.Controls.Add(this.btnPictures);
-            this.panel1.Location = new System.Drawing.Point(190, 678);
+            this.panel1.Location = new System.Drawing.Point(82, 678);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(129, 57);
             this.panel1.TabIndex = 4;
@@ -130,24 +152,6 @@
             this.toolTip1.SetToolTip(this.btnPictures, "Pictures");
             this.btnPictures.UseVisualStyleBackColor = true;
             // 
-            // pasteToolStripMenuItem
-            // 
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
-            // 
-            // cutToolStripMenuItem
-            // 
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.cutToolStripMenuItem.Text = "Cut";
-            // 
             // ChatBubbles
             // 
             this.ChatBubbles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -160,12 +164,21 @@
             this.ChatBubbles.TabIndex = 5;
             this.toolTip1.SetToolTip(this.ChatBubbles, "Messages");
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(2, 688);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 47);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Settings");
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.panel2.Location = new System.Drawing.Point(1026, 1);
+            this.panel2.Location = new System.Drawing.Point(1026, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 623);
+            this.panel2.Size = new System.Drawing.Size(181, 601);
             this.panel2.TabIndex = 6;
             // 
             // frmMain
@@ -174,6 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(1208, 735);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ChatBubbles);
             this.Controls.Add(this.panel1);
@@ -186,6 +200,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +223,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox ChatBubbles;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

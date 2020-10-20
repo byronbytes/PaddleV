@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PaddleV
 {
-    public partial class frmEmotePopupcs : Form
+    public partial class frmSettings : Form
     {
-        public frmEmotePopupcs()
+        public frmSettings()
         {
             InitializeComponent();
+        }
+
+        private void frmSettings_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

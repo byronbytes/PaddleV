@@ -117,17 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label3.Text" xml:space="preserve">
-    <value>This product is currently in closed alpha. 
-There will be a lot of bugs expected and functions to break.
+  <data name="label2.Text" xml:space="preserve">
+    <value>FAQ:
 
-You can apply for a closed alpha code later, currently this is not for the public.
-If you lose your code you cannot recover it! (For now)</value>
+Q: Help! I can't sign in! 
+A: These are 6 digit codes, that any user applied gets. If you forgot it you cannot get it back (yet)
+
+
+Q: Why can't I chat?
+A: Chatting features aren't here yet.
+
+
+Q: I was banned?
+A: This is most likely a glitch, please restart the application if this happens as we do not have a full ban function yet.
+A2: Or, you messed up badly.
+
+
+Q: What happens when you get banned?
+A: You code goes null, it is no longer usable and within 90  days it is removed from our servers.
+</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
